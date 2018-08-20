@@ -1,0 +1,8 @@
+setup notes
+
+* make the shell scripts executable
+cd ~/git/node-configs ; chmod u+x *.sh
+
+* add to .bashrc:
+alias kickoff-hub="cd ~/git/node-configs ; sudo ./kickoff-hub.sh"
+alias kickoff-linux="cd ~/git/node-configs ; sudo ./kickoff-linux.sh"

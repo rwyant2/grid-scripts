@@ -1,4 +1,4 @@
-cd c:\webdrivers
+cd c:\%gitlocation%\grid-scripts
 
 java -Dwebdriver.gecko.driver="geckodriver.exe" ^
 -Dwebdriver.chrome.driver="chromedriver.exe" ^

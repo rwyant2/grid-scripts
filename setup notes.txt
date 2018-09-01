@@ -1,8 +1,18 @@
 setup notes
 
+linux:
 * make the shell scripts executable
-cd ~/git/node-configs ; chmod u+x *.sh
+cd ~/git/grid-scripts ; sudo chmod u+x *.sh
 
 * add to .bashrc:
-alias kickoff-hub="cd ~/git/node-configs ; sudo ./kickoff-hub.sh"
-alias kickoff-linux="cd ~/git/node-configs ; sudo ./kickoff-linux.sh"
+alias kickoff-hub="cd ~/git/grid-scripts ; sudo ./kickoff-hub.sh"
+alias kickoff-linux="cd ~/git/grid-scripts ; sudo ./kickoff-linux.sh"
+alias kickoff-same="kickoff-linux "$(ip route get 8.8.8.8 | awk '{print $NF; exit}')""
+
+windows:
+* add %gitlocation% system variable
+cd c:\ && dir kickoff-win7.bat /s
+set gitlocation <wherever git is>
+
+* add git to PATH variable
+;c:\%gitlocation%\grid-scripts

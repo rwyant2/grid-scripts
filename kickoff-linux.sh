@@ -1,18 +1,19 @@
 #! /bin/sh 
-java -jar selenium-server-standalone-3.13.0.jar \
+
+#xvfb-run java -jar selenium-server-standalone-3.14.0.jar \
+java -jar selenium-server-standalone-3.14.0.jar \
+-hub http://$1:4444/grid/register \
 -port 5555 \
 -role webdriver \
--hub http://172.25.0.154:4444/grid/register \
 
--Dwebdriver.gecko.driver="geckodriver-linux" \
+-Dwebdriver.gecko.driver="geckodriver" \
 -capabilities \
 	browserName=firefox, \
 	version=latest, \
 	maxInstances=3, \
 	platform=LINUX \
 
-#-Dwebdriver.chrome.driver="chromedriver-linux" \
--Dwebdriver.chrome.driver="/webdrivers/chromedriver" \
+-Dwebdriver.chrome.driver="chromedriver" \
 -capabilities \
 	browserName=chrome, \
 	version=latest, \
